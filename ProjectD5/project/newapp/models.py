@@ -3,9 +3,9 @@ from django.db import models
 from django.db.models import Sum
 
 
-
+# Модель, содержащая объекты всех авторов и имеет следующие поля:
 class Author(models.Model):
-
+    # cвязь «один к одному» с встроенной моделью пользователей User;
     # когда имеем отношение ко встроенной модели, ее нужно импортировать из джанго
     # from django.contrib.auth.models import User
     authorUser = models.OneToOneField(User, on_delete=models.CASCADE)
